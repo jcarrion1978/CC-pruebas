@@ -50,7 +50,7 @@ app.secret_key = "mysecretkey"
 # routes
 @app.route('/BD')
 def Index():
-    cur = mysql.connection.cursor()
+   
     cur.execute('SELECT * FROM contacts')
     data = cur.fetchall()
     cur.close()
